@@ -13,7 +13,7 @@ sales_reports(log_file) #running the defined function
 
 def print_melons(log_file):
     for line in log_file:
-        values = line.split('')
+        values = line.rstrip().split(' ')
         total_melons = int(values[2])
         if total_melons > 10:
             print(total_melons)
